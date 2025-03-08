@@ -7,7 +7,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background-color: #fffaf0;
+            background-color: #f5f5dc; /* Nền màu be */
             text-align: center;
             font-family: Arial, sans-serif;
             overflow: hidden;
@@ -25,7 +25,7 @@
             transform: scale(0) translateY(50px);
             animation: growHeart 2s ease-in-out forwards;
             position: relative;
-            top: 99px; /* Dịch lên trên */
+            top: 100px; /* Dịch lên trên */
         }
         @keyframes growHeart {
             0% { transform: scale(0) translateY(50px); opacity: 0; }
@@ -57,7 +57,7 @@
         }
         @keyframes fall {
             0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+            100% { transform: translateY(101vh) rotate(360deg); opacity: 0; }
         }
     </style>
 </head>
@@ -88,7 +88,7 @@ const heartColors = ["❤️", "💖", "💛", "💜", "💚", "💙", "❤️�
             heart.classList.add("falling-heart");
             heart.innerText = heartColors[Math.floor(Math.random() * heartColors.length)];
             heart.style.left = Math.random() * window.innerWidth + "px";
-            heart.style.fontSize = Math.random() * 15 + 10 + "px"; // Kích thước ngẫu nhiên
+            heart.style.fontSize = Math.random() * 16 + 10 + "px"; // Kích thước ngẫu nhiên
             heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // 2-5 giây
             document.body.appendChild(heart);
 
